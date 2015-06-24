@@ -15,7 +15,7 @@ class GuardianComponent extends Component {
 				return;
 			}
 			if (!$guarded) {
-				throw new NotFoundException('Unguarded');
+				throw new NotFoundException();
 			}
 		}
 	}
