@@ -1,0 +1,16 @@
+{
+	"name": "xintesa/guardian",
+	"type": "cakephp-plugin",
+	"description": "Guard admin route",
+	"homepage": "http://github.com/xintesa/guardian",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Xintesa",
+			"email": "oss@xintesa.com"
+		}
+	],
+	"require": {
+		"croogo/croogo": "~2.0"
+	}
+}
