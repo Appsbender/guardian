@@ -18,13 +18,15 @@ class GuardianActivation {
 				'input_type' => 'text',
 			));
 			$controller->Session->write('Guardian.guardKey', $guardKey);
-			$controller->Session->setFlash(sprintf(
+			$message = sprintf(
 				'Admin area has been protected with URL: %s',
 				Router::url(Hash::merge(
 					Configure::read('Croogo.dashboardUrl'),
 					array('?' => $guardKey)
 				), true)
-			), 'flash', array('class' => 'success'));
+			);
+			CakeLog::write(LOG_INFO, $message);
+			$controller->Session->setFlash($message, 'flash', array('class' => 'success'));
 
 			$controller->redirect(array(
 				'admin' => true,
